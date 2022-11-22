@@ -16,7 +16,6 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
-
 The given ticket can be divided into 4 tasks:
 
 Task 1: Schema modification
@@ -33,7 +32,7 @@ Time/effort estimates:
 
 
 Task 2: Data Migration
-Migrating the existing data (autoincremental ID), which is an integer (uuid) to a string (varchar in terms of SQL). This requires an efficient ETL (Execute-Transform-Load) logic to achieve this task in an optimal way. Intermediate tables (or a new temporary database) could be used for the same. Thorough testing of the same to ensure the existing database logic does not crash.
+Migrating the existing data (autoincremental ID), which is an integer (unique id) to a string (varchar in terms of SQL). This requires an efficient ETL (Execute-Transform-Load) logic to achieve this task in an optimal way. Intermediate tables (or a new temporary schema) could be used for the same. Thorough testing of the same to ensure the existing database schema logic does not crash or behaves in an erratic fashion.
 
 Acceptance criteria: 
 Existing data matches the modified schema (type change on the field).
@@ -64,7 +63,7 @@ Time/effort estimates:
 
 
 
-Task 4: Testing (Load + Integration)
+Task 4: Testing (Load + Integration Testing)
 Implementation detail:
 Perform load testing on a new environment to ensure the new logic (with the frontend and backend changes) works seamlessly and scales well with high traffic. 
 Perform end-to-end testing on the entire system as a whole. 
@@ -82,5 +81,4 @@ Implementation detail:
 Analyse the possibility of recommending a system generated ID to the user if the input ID exists in the database already. 
 
 Time/effort estimates:
-POC could be targeted by 2 developers in 7 business days. 
-
+POC could be targeted by 2 developers in 7 business days.
